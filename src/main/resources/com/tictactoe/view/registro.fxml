@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="460.0" spacing="16.0" styleClass="root-registro" stylesheets="@../css/estilos.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tictactoe.controller.RegistroController">
+   <padding>
+      <Insets left="40.0" right="40.0" />
+   </padding>
+   <children>
+      <Label styleClass="titulo" text="TIC TAC TOE" />
+      <Label styleClass="subtitulo" text="Registro de jugadores" />
+      <VBox maxWidth="320.0" prefHeight="200.0" prefWidth="320.0" spacing="6.0">
+         <children>
+            <Label styleClass="etiqueta-campo" text="JUGADOR 1 ( X )" />
+            <TextField fx:id="txtJugador1" promptText="Nombre del jugador 1" styleClass="campo" />
+            <Label styleClass="etiqueta-campo" text="JUGADOR 2 ( O )">
+               <VBox.margin>
+                  <Insets top="14.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="txtJugador2" promptText="Nombre del jugador 2" styleClass="campo" />
+         </children>
+      </VBox>
+      <Label fx:id="lblError" minHeight="20.0" styleClass="message-error" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="14.0">
+         <children>
+            <Button fx:id="btnLimpiar" mnemonicParsing="false" onAction="#limpiar" prefHeight="42.0" prefWidth="150.0" styleClass="boton-secundario" text="Limpiar" />
+            <Button fx:id="btnComenzar" mnemonicParsing="false" onAction="#comenzar" prefHeight="42.0" prefWidth="170.0" styleClass="boton-primario" text="Comenzar" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

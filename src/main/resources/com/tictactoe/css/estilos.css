@@ -1,0 +1,167 @@
+/* ===== Paleta Mario Bros =====
+   Cielo:        #5C94FC
+   Rojo Mario:   #E52521
+   Azul overol:  #1E3FDB
+   Moneda/Bloque:#F8B800
+   Ladrillo:     #C84C0C
+   Tubería:      #1BA400
+   Negro/Blanco: #000000 / #FFFFFF
+*/
+
+.root-registro,
+.root-juego {
+    -fx-background-color: linear-gradient(to bottom, #5C94FC, #9CC4FF);
+    -fx-font-family: "Consolas", "Courier New", monospace;
+}
+
+/* ---------- Textos ---------- */
+.titulo {
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F8B800;
+    -fx-effect: dropshadow(one-pass-box, #7A1F00, 0, 0, 4, 4);
+}
+
+.subtitulo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 2, 2);
+}
+
+.etiqueta-campo {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 2, 2);
+}
+
+.jugadores {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 2, 2);
+}
+
+.estado {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F8B800;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 3, 3);
+}
+
+/* ---------- Campos de texto ---------- */
+.campo {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-prompt-text-fill: #7A7A7A;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 10 12 10 12;
+    -fx-font-size: 14px;
+}
+
+.campo:focused {
+    -fx-border-color: #E52521;
+}
+
+/* ---------- Mensajes ---------- */
+.mensaje-error {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, #B00000, 0, 0, 2, 2);
+}
+
+.mensaje-ok {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(one-pass-box, #005800, 0, 0, 2, 2);
+}
+
+/* ---------- Botones ---------- */
+.boton-primario {
+    -fx-background-color: #E52521;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+}
+
+.boton-primario:hover {
+    -fx-background-color: #FF4B47;
+}
+
+.boton-primario:pressed {
+    -fx-translate-y: 3;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 1);
+}
+
+.boton-secundario {
+    -fx-background-color: #1BA400;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+}
+
+.boton-secundario:hover {
+    -fx-background-color: #3CBC00;
+}
+
+.boton-secundario:pressed {
+    -fx-translate-y: 3;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 1);
+}
+
+/* ---------- Tablero (casillas vacías = ladrillo) ---------- */
+.tablero .button {
+    -fx-pref-width: 100;
+    -fx-pref-height: 100;
+    -fx-background-color: #C84C0C;
+    -fx-background-radius: 6;
+    -fx-border-color: #5C1F00;
+    -fx-border-width: 4;
+    -fx-border-radius: 6;
+    -fx-text-fill: white;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.tablero .button:hover {
+    -fx-background-color: #E06A2A;
+}
+
+/* Casillas jugadas = bloque dorado con la letra */
+.tablero .button.casilla-x {
+    -fx-background-color: #F8B800;
+    -fx-border-color: #7A3E00;
+    -fx-text-fill: #E52521;
+}
+
+.tablero .button.casilla-o {
+    -fx-background-color: #F8B800;
+    -fx-border-color: #7A3E00;
+    -fx-text-fill: #1E3FDB;
+}
+
+/* Línea ganadora = verde (debe ir al final) */
+.tablero .button.casilla-ganadora {
+    -fx-background-color: #3CBC00;
+    -fx-border-color: #005800;
+    -fx-text-fill: white;
+}
