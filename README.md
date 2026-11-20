@@ -14,7 +14,7 @@ Proyecto escolar de **Programación Orientada a Objetos**.
 - [Conceptos de POO aplicados](#-conceptos-de-poo-aplicados)
 - [Autor](#-autor)
 
-## ✨ Características
+## Características
 
 - Registro de dos jugadores: no permite nombres vacíos ni repetidos.
 - Tablero de 3x3: Jugador 1 con **X** y Jugador 2 con **O**.
